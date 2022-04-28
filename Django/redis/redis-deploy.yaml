@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-deploy
+spec:
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec:
+      containers:
+      - name: redis
+        image: langhae/m-dev:redis_v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 6379
+        volumeMounts:
+          - mountPath: /usr/local/etc/redis
+            name: conf
+      volumes:
+        - name: conf
+          configMap:
+            name: redis-conf

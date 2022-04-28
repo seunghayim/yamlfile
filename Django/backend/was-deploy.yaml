@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: was-deploy
+  # namespace: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: was
+  template:
+    metadata:
+      labels:
+        app: was
+    spec:
+      containers:
+      - name: django
+        image: langhae/was:django_s3
+        imagePullPolicy: Always
+        envFrom:
+        - secretRef:
+            name: django-secret
+        - configMapRef:
+            name: django-configmap
+        ports:
+        - containerPort: 8000
+      initContainers:
+      - name: init-myservice
+        image: busybox:1.28
+        command: ['sh', '-c', "until nslookup db-0.db-svc.default.svc.cluster.local; do echo waiting for db; sleep 2; done"]
+      
+      
