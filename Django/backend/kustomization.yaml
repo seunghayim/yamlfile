@@ -1,0 +1,11 @@
+resources:
+- was-deploy.yaml
+- was-svc.yaml
+configMapGenerator:
+- name: django-configmap
+  files:
+  - .env.configmap
+secretGenerator:
+- name: django-secret
+  files:
+  - .env.secret

@@ -2,3 +2,5 @@ nginx
 Role-RoleBinding
 Django/.env
 Django/db
+Django/backend/.env*
+Django/frontend/.web*
