@@ -1,6 +1,5 @@
-nginx
-Role-RoleBinding
-Django/.env
-Django/db
-Django/backend/.env*
-Django/frontend/.web*
+kustomize/.env
+kustomize/db
+kustomize/backend/.env*
+kustomize/frontend/.web*
+kustomize/secret_configmap

@@ -1,0 +1,11 @@
+resources:
+- db-stateful.yaml
+- db-svc.yaml
+configMapGenerator:
+- name: db-utf8
+  files:
+  - .db.utf8.configmap
+secretGenerator:
+- name: db-envs
+  files:
+  - .env.db.secret

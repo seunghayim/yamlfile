@@ -6,7 +6,7 @@ metadata:
     # Ingress Core Settings
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/target-type: instance
     # SSL Settings
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:eu-west-2:940168446867:certificate/dd064307-1d9a-4fcb-a51f-271f7b48a5af
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'

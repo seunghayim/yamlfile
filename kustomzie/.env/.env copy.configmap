@@ -1,0 +1,25 @@
+# 명령어
+# kubectl create configmap django-configmap --from-env-file=.env.configmap -o yaml --dry-run=client > dango-configmap.yaml
+
+# DEBUG ON-1 / OF-0
+DEBUG=0
+
+# CSRF TRUST HOST + EAMIL_CONFIRMATION_REDIRECT_ADDRESS
+ENV_TRUSTED_ORIGINS=http://www.mclabha.com
+
+# DB ENGINE
+DATABASE_ENGINE=django.db.backends.mysql
+
+# REDIS INFORMATION
+REDIS_HOST=redis_db
+REDIS_PORT=6380
+
+# EMAIL INFO
+MY_EMAIL_HOST=smtp.gmail.com
+MY_EMAIL_PORT=587
+MY_EMAIL_ADDRESS=yimlimseungha@gmail.com
+
+# DO BUCET NAME
+AWS_STORAGE_BUCKET_NAME=langhae
+
+

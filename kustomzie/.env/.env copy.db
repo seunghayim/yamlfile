@@ -1,0 +1,7 @@
+# 명령어
+# kubectl.exe create secret generic db-envs --from-env-file .env.db -o yaml --dry-run=client > db-envs.yaml
+
+MARIADB_DATABASE=review
+MARIADB_PASSWORD=dla76954
+MARIADB_USER=langhae
+MARIADB_ROOT_PASSWORD=dla76954

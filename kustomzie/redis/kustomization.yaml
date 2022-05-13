@@ -1,0 +1,8 @@
+resources:
+- redis-deploy.yaml
+- redis-svc.yaml
+configMapGenerator:
+- name: redis-conf
+  files:
+  - .redis.configmap
+
